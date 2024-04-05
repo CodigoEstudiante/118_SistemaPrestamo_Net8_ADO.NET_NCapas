@@ -61,6 +61,10 @@ $("#btnBuscar").on("click", function () {
 
 
         } else {
+            $("#txtNombre").val('');
+            $("#txtApellido").val('');
+            $("#txtCorreo").val('');
+            $("#txtTelefono").val('');
             Swal.fire({
                 title: "No se encontro un cliente registrado",
                 text: `Desea registrar manualmente?`,
