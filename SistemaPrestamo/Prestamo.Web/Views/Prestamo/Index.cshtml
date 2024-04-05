@@ -1,0 +1,107 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@section Estilos {
+    <link href="~/lib/datatables2/css/datatables.datatables.css" rel="stylesheet" />
+}
+
+<div class="row mt-4">
+    <div class="col-sm-12">
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fa-solid fa-dollar-sign"></i>
+                Lista de Prestamos
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <a class="btn btn-success" asp-controller="Prestamo" asp-action="Nuevo">
+                            <i class="fa-solid fa-plus"></i> Nuevo Prestamo
+                        </a>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table class="display cell-border" id="tbData" cellspacing="0" style="width:100%">
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="mdData" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="txtIdPrestamo"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="txtMontoPrestamo" placeholder="Monto Prestamo" disabled>
+                            <label for="floatingInput">Monto Prestamo:</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="txtInteres" placeholder="Interes %" disabled>
+                            <label for="floatingInput">Interes %:</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="txtNroCuotas" placeholder="Nro. Cuotas" disabled>
+                            <label for="floatingInput">Nro. Cuotas:</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="txtFormaPago" placeholder="Forma de Pago" disabled>
+                            <label for="floatingInput">Forma de Pago:</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="txtTipoMoneda" placeholder="Tipo Moneda" disabled>
+                            <label for="floatingInput">Tipo Moneda:</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="txtMontoTotal" placeholder="Monto Total" disabled>
+                            <label for="floatingInput">Monto Total:</label>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+
+                        <table class="table table-striped" id="tbDetalle">
+                            <thead>
+                                <tr>
+                                    <th>Nro. Cuota</th>
+                                    <th>Fecha de Pago</th>
+                                    <th>Monto</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                           <tbody>
+                           </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                <button type="button" class="btn btn-primary" id="btnImprimir">Imprimir</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/datatables2/js/moment.min.js"></script>
+    <script src="~/lib/datatables2/js/datatables.js"></script>
+    <script src="~/views/prestamo.js"></script>
+}

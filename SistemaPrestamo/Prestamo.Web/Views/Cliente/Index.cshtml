@@ -1,0 +1,83 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@section Estilos {
+    <link href="~/lib/datatables2/css/datatables.datatables.css" rel="stylesheet" />
+}
+<div class="row mt-4">
+    <div class="col-sm-12">
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fa-solid fa-user-group"></i>
+                Lista de Clientes
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <button class="btn btn-success" id="btnNuevo"> <i class="fa-solid fa-plus"></i>  Nuevo Cliente</button>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table class="display cell-border" id="tbData" cellspacing="0" style="width:100%">
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="mdData" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Cliente</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label class="col-form-label">Nro. Documento:</label>
+                        <input type="text" class="form-control data-in" id="txtNroDocumento" autocomplete="off" name="Nro_Documento">
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="col-form-label">Nombre:</label>
+                        <input type="text" class="form-control data-in" id="txtNombre" autocomplete="off" name="Nombre">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label class="col-form-label">Apellido:</label>
+                        <input type="text" class="form-control data-in" id="txtApellido" autocomplete="off" name="Apellido">
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="col-form-label">Correo:</label>
+                        <input type="email" class="form-control data-in" id="txtCorreo" autocomplete="off" name="Correo">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label class="col-form-label">Telefono:</label>
+                        <input type="text" class="form-control data-in" id="txtTelefono" autocomplete="off" name="Telefono">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" id="btnGuardar">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/datatables2/js/moment.min.js"></script>
+    <script src="~/lib/datatables2/js/datatables.js"></script>
+    <script src="~/views/cliente.js"></script>
+
+}

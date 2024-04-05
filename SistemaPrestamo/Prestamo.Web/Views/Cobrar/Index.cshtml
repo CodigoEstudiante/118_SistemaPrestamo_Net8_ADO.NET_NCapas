@@ -1,0 +1,174 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@section Estilos {
+    <style>
+        input[type=checkbox]{
+            width:22px;
+            height:22px;
+            cursor:pointer;
+        }
+    </style>
+}
+<div class="row mt-4">
+    <div class="col-sm-6">
+        <div class="card mb-4 cardInfo">
+            <div class="card-header">
+                <i class="fa-solid fa-file-invoice"></i>
+                Prestamo
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label for="txtNroDocumento" class="form-label">Nro. Documento cliente:</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control data-in" id="txtNroDocumento" autocomplete="off" name="Numero_Documento">
+                            <button class="btn btn-secondary" type="button" id="btnBuscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label for="txtNroPrestamo" class="form-label">Nro Prestamo:</label>
+                            <input type="text" class="form-control data-in" id="txtNroPrestamo" autocomplete="off" disabled>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label for="txtNombreCliente" class="form-label">Nombre Cliente:</label>
+                            <input type="text" class="form-control data-in" id="txtNombreCliente" autocomplete="off" name="Apellido" disabled>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label for="txtMontoPrestamo" class="form-label">Monto Prestamo:</label>
+                            <input type="text" class="form-control data-in" id="txtMontoPrestamo" autocomplete="off" disabled>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label for="txtInteres" class="form-label">Interes%:</label>
+                            <input type="text" class="form-control data-in" id="txtInteres" autocomplete="off" name="Apellido" disabled>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label for="txtNroCuotas" class="form-label">Nro Cuotas:</label>
+                            <input type="text" class="form-control data-in" id="txtNroCuotas" autocomplete="off" disabled>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label for="txtMontoTotal" class="form-label">Monto Total:</label>
+                            <input type="text" class="form-control data-in" id="txtMontoTotal" autocomplete="off" name="Apellido" disabled>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label for="txtFormadePago" class="form-label">Forma de pago:</label>
+                            <input type="text" class="form-control data-in" id="txtFormadePago" autocomplete="off" disabled>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label for="txtTipoMoneda" class="form-label">Tipo Moneda:</label>
+                            <input type="text" class="form-control data-in" id="txtTipoMoneda" autocomplete="off" name="Apellido" disabled>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="col-sm-6">
+        <div class="card cardInfo">
+            <div class="card-header">
+                <i class="fa-solid fa-file-invoice"></i>
+                Detalle
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered" id="tbDetalle">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Nro Cuota</th>
+                                        <th>Fecha Pago</th>
+                                        <th>Monto Cuota</th>
+                                        <th>Estado</th>
+                                        <th>Fecha Cancelado</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="row align-items-end">
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label for="txtFormadePago" class="form-label">Total a pagar:</label>
+                            <input type="text" class="form-control data-in" id="txtTotalaPagar" autocomplete="off" disabled>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <button class="btn btn-warning" id="btnRegistrarPago"><i class="fa-solid fa-money-bill-1"></i> Registrar pago</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="mdData" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Prestamos encontrados</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table class="table table-striped table-bordered" id="tbPrestamosEncontrados">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Nro Prestamo</th>
+                                    <th>Monto Prestamo</th>
+                                    <th>Estado</th>
+                                    <th>Fecha Registro</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" id="btnGuardar">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script src="~/views/cobrar.js"></script>
+}

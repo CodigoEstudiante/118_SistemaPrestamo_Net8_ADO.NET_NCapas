@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Prestamo.Entidades/1.0.0": {
+        "runtime": {
+          "Prestamo.Entidades.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Prestamo.Entidades/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

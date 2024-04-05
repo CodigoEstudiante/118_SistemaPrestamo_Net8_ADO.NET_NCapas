@@ -1,0 +1,15 @@
+E:\WorkSpaceAD\YOUTUBE\118 Sistema de Prestamos NET 8\SistemaPrestamo\Prestamo.Data\bin\Debug\net8.0\Prestamo.Data.deps.json
+E:\WorkSpaceAD\YOUTUBE\118 Sistema de Prestamos NET 8\SistemaPrestamo\Prestamo.Data\bin\Debug\net8.0\Prestamo.Data.dll
+E:\WorkSpaceAD\YOUTUBE\118 Sistema de Prestamos NET 8\SistemaPrestamo\Prestamo.Data\bin\Debug\net8.0\Prestamo.Data.pdb
+E:\WorkSpaceAD\YOUTUBE\118 Sistema de Prestamos NET 8\SistemaPrestamo\Prestamo.Data\bin\Debug\net8.0\Prestamo.Entidades.dll
+E:\WorkSpaceAD\YOUTUBE\118 Sistema de Prestamos NET 8\SistemaPrestamo\Prestamo.Data\bin\Debug\net8.0\Prestamo.Entidades.pdb
+E:\WorkSpaceAD\YOUTUBE\118 Sistema de Prestamos NET 8\SistemaPrestamo\Prestamo.Data\obj\Debug\net8.0\Prestamo.Data.csproj.AssemblyReference.cache
+E:\WorkSpaceAD\YOUTUBE\118 Sistema de Prestamos NET 8\SistemaPrestamo\Prestamo.Data\obj\Debug\net8.0\Prestamo.Data.GeneratedMSBuildEditorConfig.editorconfig
+E:\WorkSpaceAD\YOUTUBE\118 Sistema de Prestamos NET 8\SistemaPrestamo\Prestamo.Data\obj\Debug\net8.0\Prestamo.Data.AssemblyInfoInputs.cache
+E:\WorkSpaceAD\YOUTUBE\118 Sistema de Prestamos NET 8\SistemaPrestamo\Prestamo.Data\obj\Debug\net8.0\Prestamo.Data.AssemblyInfo.cs
+E:\WorkSpaceAD\YOUTUBE\118 Sistema de Prestamos NET 8\SistemaPrestamo\Prestamo.Data\obj\Debug\net8.0\Prestamo.Data.csproj.CoreCompileInputs.cache
+E:\WorkSpaceAD\YOUTUBE\118 Sistema de Prestamos NET 8\SistemaPrestamo\Prestamo.Data\obj\Debug\net8.0\Prestamo.B65E97AF.Up2Date
+E:\WorkSpaceAD\YOUTUBE\118 Sistema de Prestamos NET 8\SistemaPrestamo\Prestamo.Data\obj\Debug\net8.0\Prestamo.Data.dll
+E:\WorkSpaceAD\YOUTUBE\118 Sistema de Prestamos NET 8\SistemaPrestamo\Prestamo.Data\obj\Debug\net8.0\refint\Prestamo.Data.dll
+E:\WorkSpaceAD\YOUTUBE\118 Sistema de Prestamos NET 8\SistemaPrestamo\Prestamo.Data\obj\Debug\net8.0\Prestamo.Data.pdb
+E:\WorkSpaceAD\YOUTUBE\118 Sistema de Prestamos NET 8\SistemaPrestamo\Prestamo.Data\obj\Debug\net8.0\ref\Prestamo.Data.dll

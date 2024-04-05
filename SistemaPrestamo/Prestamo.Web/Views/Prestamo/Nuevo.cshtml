@@ -1,0 +1,153 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="row mt-4">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-body bg-light d-flex justify-content-end align-items-end">
+                <h5 class="card-title me-auto">Nuevo Prestamo</h5>
+                <a class="btn btn-dark" asp-controller="Prestamo" asp-action="Index"><i class="fa-solid fa-rotate-left"></i> Volver</a>
+                <button class="btn btn-primary ms-2" type="button" id="btnRegistrar"><i class="fa-solid fa-check"></i> Registrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-sm-6">
+        <div class="card mb-4" id="cardCliente">
+            <div class="card-header">
+                <i class="fa-solid fa-user"></i>
+                Cliente
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="txtNroDocumento" class="form-label">Numero Documento:</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control data-in" id="txtNroDocumento" autocomplete="off" name="Numero_Documento">
+                            <button class="btn btn-secondary" type="button" id="btnBuscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtNombre" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control data-in" id="txtNombre" autocomplete="off" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtApellido" class="form-label">Apellido:</label>
+                            <input type="text" class="form-control data-in" id="txtApellido" autocomplete="off" name="Apellido" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtCorreo" class="form-label">Correo:</label>
+                            <input type="text" class="form-control data-in" id="txtCorreo" autocomplete="off" name="Correo" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtTelefono" class="form-label">Telefono:</label>
+                            <input type="text" class="form-control data-in" id="txtTelefono" autocomplete="off" name="Telefono" disabled>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fa-solid fa-file-invoice"></i>
+                Detalle
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label for="txtMontoPrestamo" class="form-label">Monto Prestamo:</label>
+                            <input type="number" class="form-control data-prestamo" id="txtMontoPrestamo" name="Monto_Prestamo" min="1" autocomplete="off">
+                        </div>
+                       
+                    </div>  
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label for="txtInteres" class="form-label">Interes %:</label>
+                            <input type="number" class="form-control data-prestamo" id="txtInteres" name="Interes" min="1" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label for="txtNroCuotas" class="form-label">Nro. Cuotas:</label>
+                            <input type="number" class="form-control data-prestamo" id="txtNroCuotas" name="NroCuotas" min="1" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label for="cboFormaPago" class="form-label">Forma de pago:</label>
+                            <select class="form-select data-prestamo" id="cboFormaPago" name="Forma_de_pago">
+                                <option value="Diario">Diario</option>
+                                <option value="Semanal">Semanal</option>
+                                <option value="Quincenal">Quincenal</option>
+                                <option value="Mensual">Mensual</option>
+                            </select>
+                        </div>
+                    </div> 
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label for="cboTipoMoneda" class="form-label">Tipo Moneda:</label>
+                            <select class="form-select data-prestamo" id="cboTipoMoneda" name="Tipo_Moneda">
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label for="txtFechaInicio" class="form-label">Fecha Inicio:</label>
+                            <input type="date" class="form-control data-prestamo" id="txtFechaInicio" name="Fecha_Inicio">
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row align-items-end">
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-secondary" id="btnCalcular"><i class="fa-solid fa-square-root-variable"></i> Calcular</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label for="txtMontoPorCuota" class="form-label">Monto por Cuota:</label>
+                            <input type="text" class="form-control data-in" id="txtMontoPorCuota" name="Interes" disabled>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label for="txtMontoInteres" class="form-label">Monto Interes:</label>
+                            <input type="text" class="form-control data-in" id="txtMontoInteres" name="Interes" disabled>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label for="txtMontoTotal" class="form-label">Monto Total:</label>
+                            <input type="text" class="form-control data-in" id="txtMontoTotal" name="Interes" disabled>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/moment/moment.min.js"></script>
+    <script src="~/views/nuevoprestamo.js"></script>
+}

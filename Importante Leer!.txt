@@ -1,0 +1,5 @@
+Paso 1: Dirigirte a la carpeta "Scripts" y utiliza los querys para crear la base de datos, insertar registros por defecto y crear los procedimientos almacenados.
+
+Paso 2: Abrir el proyecto de la carpeta "SistemaPrestamo"
+
+Paso 3: Cambiar la cadena de conexion hacia tu base de datos en el archivo "appsettings.json", el atributo es "CadenaSQL".
